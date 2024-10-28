@@ -4,9 +4,9 @@ const Disclaimer = () => {
   return (
     <Alert className="mt-12 bg-muted">
       <AlertDescription className="text-center">
-        This blog is an independent publication and is not affiliated with, endorsed by, or connected to
-        Formula 1, Formula One World Championship Limited, Formula One Management, Formula One
-        Administration, or any other subsidiary or affiliate of Formula One Group.
+        Este blog é uma publicação independente e não possui vínculo, endosso ou conexão com a
+        Fórmula 1, Formula One World Championship Limited, Formula One Management, Formula One
+        Administration, ou qualquer outra subsidiária ou afiliada do Grupo Formula One.
       </AlertDescription>
     </Alert>
   );

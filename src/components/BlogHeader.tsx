@@ -5,16 +5,16 @@ const BlogHeader = () => {
     <header className="bg-[hsl(var(--primary))] text-white py-6 shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <h1 className="text-3xl font-bold">F1 Insights Blog</h1>
+          <h1 className="text-3xl font-bold">Blog F1 Insights</h1>
           <nav className="space-x-4">
             <Button variant="ghost" className="text-white hover:text-white/80">
-              Home
+              Início
             </Button>
             <Button variant="ghost" className="text-white hover:text-white/80">
-              Latest Posts
+              Últimas Postagens
             </Button>
             <Button variant="ghost" className="text-white hover:text-white/80">
-              About
+              Sobre
             </Button>
           </nav>
         </div>
