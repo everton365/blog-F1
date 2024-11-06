@@ -1,0 +1,13 @@
+POST http://localhost:3030/api/posts
+content-type: application/json
+
+{
+    "id": 2,
+    "title":  "História do GP do Brasil",
+   " author": "everton silva",
+    "urlimage": "https://embarqueoficial.com.br/wp-content/uploads/2024/10/gp-brasil-f1-grande-premio-2024-interlagos-privados-formula1.jpg",
+    "creditoimage": "Ana Santos no Unsplash",
+    "usuariosid": 3,
+    "contenttext": "A trajetória emocionante de Interlagos e seus momentos mais marcantes."
+
+}

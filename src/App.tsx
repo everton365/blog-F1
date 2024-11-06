@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import { UserProvider } from "./contexts/UserContext";
 import RoleCheckModal from "./components/RoleCheckModal";
+import BlogPostPage from "./pages/post";
+import UltimasPostagens from "./pages/ultimasPostagens";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +21,8 @@ const App = () => (
           <RoleCheckModal />
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/Blog-posts/:id" element={<BlogPostPage/>} />
+            <Route path="/UltimasPostagens" element={<UltimasPostagens />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>

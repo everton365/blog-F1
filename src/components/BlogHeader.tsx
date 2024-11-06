@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
+
 
 const BlogHeader = () => {
   return (
@@ -7,12 +9,16 @@ const BlogHeader = () => {
         <div className="flex justify-between items-center">
           <h1 className="text-3xl font-bold">Blog F1 Insights</h1>
           <nav className="space-x-4">
+            <Link to="/">
             <Button variant="ghost" className="text-white hover:text-white/80">
               Início
             </Button>
+              </Link>
+              <Link to="/UltimasPostagens">
             <Button variant="ghost" className="text-white hover:text-white/80">
               Últimas Postagens
             </Button>
+            </Link>
             <Button variant="ghost" className="text-white hover:text-white/80">
               Sobre
             </Button>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -11,14 +11,21 @@ import { Input } from "@/components/ui/input";
 import { useUser } from "@/contexts/UserContext";
 import { useToast } from "@/components/ui/use-toast";
 
+
+
+
+
 const RoleCheckModal = () => {
+  const adminPasswordAlt = import.meta.env.VITE_ADMIN_PASSWORD;
+  const adminPassword = import.meta.env.VITE_ADMIN_PASSWORD_ALT;
+ 
   const [open, setOpen] = useState(true);
   const [password, setPassword] = useState("");
   const { setRole } = useUser();
   const { toast } = useToast();
 
   const handleSubmit = () => {
-    if (password === "12345") {
+    if (password === adminPasswordAlt|| password === adminPassword) {
       setRole("admin");
       toast({
         title: "Bem-vindo, Administrador!",
