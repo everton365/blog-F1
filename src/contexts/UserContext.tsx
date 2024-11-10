@@ -28,8 +28,9 @@ export function UserProvider({ children }: { children: ReactNode }) {
   const [posts, setPosts] = useState<Post[]>([]);
 
   const fetchPosts = async () => {
+    const UrlServer = import.meta.env.VITE_API_URL;
     try {
-      const response = await fetch('http://localhost:3030/post');
+      const response = await fetch(UrlServer);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
