@@ -19,9 +19,11 @@ const BlogHeader = () => {
               Últimas Postagens
             </Button>
             </Link>
+            <Link to="/sobre">
             <Button variant="ghost" className="text-white hover:text-white/80">
               Sobre
             </Button>
+            </Link>
           </nav>
         </div>
       </div>

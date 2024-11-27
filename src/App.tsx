@@ -8,6 +8,7 @@ import { UserProvider } from "./contexts/UserContext";
 import RoleCheckModal from "./components/RoleCheckModal";
 import BlogPostPage from "./pages/post";
 import UltimasPostagens from "./pages/ultimasPostagens";
+import Sobre from "./pages/sobre";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/Blog-posts/:id" element={<BlogPostPage/>} />
             <Route path="/UltimasPostagens" element={<UltimasPostagens />} />
+            <Route path="/sobre" element={<Sobre />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
