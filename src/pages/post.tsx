@@ -91,7 +91,21 @@ function BlogPostPage() {
 
 
 </p>
-
+<div className="flex justify-center items-center h-screen text-center">
+      <div>
+        <h1 className="text-5xl font-extrabold text-gray-800 mb-6">Confira nosso vídeo!</h1>
+        <iframe
+          width="860"
+          height="515"
+          src="https://www.youtube.com/embed/"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
+    </div>
+  
   </div>
   <Disclaimer />
   </>

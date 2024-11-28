@@ -28,12 +28,22 @@ app.post("/api/posts", async (req, res) => {
     urlimage,
     creditoimage,
     usuariosid,
+    videourl,
     date,
   } = req.body;
   try {
     const result = await pool.query(
-      "INSERT INTO blogposts (title, contenttext, author,creditoimage,urlimage, usuariosId,date) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *",
-      [title, contenttext, author, creditoimage, urlimage, usuariosid, date]
+      "INSERT INTO blogposts (title, contenttext, author,creditoimage,urlimage, usuariosId,videourl,date) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *",
+      [
+        title,
+        contenttext,
+        author,
+        creditoimage,
+        urlimage,
+        usuariosid,
+        videourl,
+        date,
+      ]
     );
     res.status(201).json(result.rows[0]); // Retorna o post inserido
   } catch (error) {

@@ -19,6 +19,7 @@ const CreateArticleDialog = () => {
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
   const [imageCredit, setImageCredit] = useState("");
+  const [video, setVideo] = useState("");
   const [content, setContent] = useState("");
   const [author, setAuthor] = useState("");
   const [error, setError] = useState("");
@@ -27,7 +28,7 @@ const CreateArticleDialog = () => {
   if (role !== "admin") return null;
 
   const handleSubmit = async () => {
-    if (!title || !author || !image || !imageCredit || !content) {
+    if (!title || !author || !image || !imageCredit || !content || !video) {
       setError("Todos os campos são obrigatórios.");
       return;
     }
@@ -39,6 +40,7 @@ const CreateArticleDialog = () => {
       creditoimage: imageCredit,
       usuariosid: 1,
       author:author,
+      videourl:video,
       date: new Date().toISOString() 
     };
   
@@ -56,6 +58,7 @@ const CreateArticleDialog = () => {
       setImage("");
       setImageCredit("");
       setContent("");
+      setVideo("");
       setError("");
     } catch (error) {
       console.error("Erro na requisição:", error);
@@ -103,6 +106,16 @@ const CreateArticleDialog = () => {
               value={image}
               onChange={(e) => setImage(e.target.value)}
               placeholder="Cole a URL da imagem de capa"
+              required
+            />
+          </div>
+          <div className="grid gap-2">
+            <Label htmlFor="video">URL do Video</Label>
+            <Input
+              id="video"
+              value={video}
+              onChange={(e) => setVideo(e.target.value)}
+              placeholder="Cole a URL do video"
               required
             />
           </div>
