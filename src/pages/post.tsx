@@ -12,6 +12,14 @@ function BlogPostPage() {
   const {posts  } = useUser(); 
   const [post, setPost] = useState(null);
 
+const extractYouTubeID = (url) => {
+  const parts = url.split("v="); // Divide a URL com base em 'v='
+  return parts[1] ? parts[1].split("&")[0] : null; // Pega a parte após 'v=' e ignora parâmetros extras
+};
+
+
+
+
 
   // Função para buscar um único post
   useEffect(() => {
@@ -20,6 +28,7 @@ function BlogPostPage() {
       // Converte o ID da URL para string, se necessário
       const foundPost = posts.find(p => p.id.toString() === id); // Converte o ID do post para string
       setPost(foundPost); // Define o post encontrado no estado
+      
     }
   }, [id, posts]); // Reexecuta quando o ID ou os posts mudarem
 
@@ -46,7 +55,8 @@ function BlogPostPage() {
       return <p key={index} className="mb-4">{line}</p>;
     });
   };
-
+  const videoID = extractYouTubeID(post.videourl);
+ 
  
   return (
     <>
@@ -97,7 +107,7 @@ function BlogPostPage() {
         <iframe
           width="860"
           height="515"
-          src="https://www.youtube.com/embed/"
+          src={`https://www.youtube.com/embed/${videoID}`}
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
