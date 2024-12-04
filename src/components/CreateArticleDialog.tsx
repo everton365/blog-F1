@@ -45,7 +45,7 @@ const CreateArticleDialog = () => {
     };
   
     try {
-      const response = await axios.post("http://localhost:3030/api/posts", articleData, {
+      const response = await axios.post("http://18.223.171.179:3030/api/posts", articleData, {
         headers: {
           "Content-Type": "application/json",
         },
