@@ -30,7 +30,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
   const fetchPosts = async () => {
     const UrlServer = import.meta.env.VITE_API_URL;
     try {
-      const response = await fetch(UrlServer);
+      const response = await fetch("http://18.224.242.144:3000/post");
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
