@@ -52,7 +52,7 @@ const extractYouTubeID = (url) => {
         );
       }
       // Renderiza as outras linhas como parágrafos normais
-      return <p key={index} className="mb-4">{line}</p>;
+      return <p key={index} className="indent-8 mt-4">{line}</p>;
     });
   };
   const videoID = extractYouTubeID(post.videourl);
@@ -83,12 +83,9 @@ const extractYouTubeID = (url) => {
     
     <div className="text-gray-800 leading-relaxed text-lg max-w-3xl mx-auto px-6 space-y-6">
  
-    <p
-      
-      className="indent-8 mt-4"
-    >
+   
      {renderContent(post.contenttext)}
-    </p>
+    
   
 
 </div>
