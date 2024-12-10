@@ -38,7 +38,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
       console.log(data); // Adicione isso para verificar os dados retornados
       setPosts(data.reverse());
     } catch (error) {
-      console.error('Erro ao buscar os posts:', error);
+      console.error('Erro ao buscar os posts:', error); 
     }
   };
   useEffect(() => {
