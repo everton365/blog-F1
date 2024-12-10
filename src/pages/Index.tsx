@@ -7,7 +7,7 @@ import Disclaimer from "@/components/Disclaimer";
 import CreateArticleDialog from "@/components/CreateArticleDialog";
 
 
-const Index = () => { 
+const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <BlogHeader />
