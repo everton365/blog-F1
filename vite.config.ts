@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
     proxy: {
       '/post': {
-        target: 'http://blognews360.duckdns.org',
+        target: 'https://blognews360.duckdns.org',
         changeOrigin: true,
       },
     },
