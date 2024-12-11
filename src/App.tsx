@@ -8,7 +8,7 @@ import { UserProvider } from "./contexts/UserContext";
 import RoleCheckModal from "./components/RoleCheckModal";
 import BlogPostPage from "./pages/post";
 import UltimasPostagens from "./pages/ultimasPostagens";
-import Sobre from "./pages/sobre";
+import Sobre from "./pages/sobre"; 
 
 const queryClient = new QueryClient();
 
