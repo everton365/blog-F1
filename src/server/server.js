@@ -11,6 +11,8 @@ const blogPost = [];
 
 // Middleware para parse do JSON
 app.use(cors());
+
+app.use(cors({ origin: 'http://localhost:8080' }));
 app.use(express.json());
 
 app.post("/blogPost", (req, res) => {

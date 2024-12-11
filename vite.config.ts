@@ -8,6 +8,12 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    proxy: {
+      '/post': {
+        target: 'http://blognews360.duckdns.org',
+        changeOrigin: true,
+      },
+    },
   },
   plugins: [
     react(),
@@ -18,4 +24,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+
 }));
