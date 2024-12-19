@@ -87,6 +87,6 @@ app.listen(PORT, () => {
 https.createServer({
   cert: fs.readFileSync('../../SSL/code.crt'),
   key:fs.readFileSync('../../SSL/code.key')
-}, app). listen(443, () => console.log("Rodando em https"))
+}, app). listen(8443, () => console.log("Rodando em https"))
 
 });
