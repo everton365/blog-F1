@@ -83,9 +83,10 @@ app.get("/post", async (req, res) => {
 });
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
+  
 https.createServer({
-  cert: fs.readFileSync('../../ssl/code.crt'),
-  key:fs.readFileSync('../../ssl/code.key')
+  cert: fs.readFileSync('../../SSL/code.crt'),
+  key:fs.readFileSync('../../SSL/code.key')
 }, app). listen(443, () => console.log("Rodando em https"))
 
 });
