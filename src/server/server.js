@@ -1,6 +1,8 @@
 // server.js
 import express from "express";
 import pool from "../DBconfig/dbConfig.js";
+import fs from 'fs';
+import https from 'https';
 import dotenv from "dotenv";
 import cors from "cors";
 
@@ -81,4 +83,9 @@ app.get("/post", async (req, res) => {
 });
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
+https.createServer({
+  cert: fs.readFileSync('../../ssl/code.crt'),
+  key:fs.readFileSync('../../ssl/code.key')
+}, app). listen(443, () => console.log("Rodando em https"))
+
 });

@@ -30,7 +30,10 @@ export function UserProvider({ children }: { children: ReactNode }) {
   const fetchPosts = async () => {
     const UrlServer = import.meta.env.VITE_API_URL;
     try {
-      const response = await fetch(UrlServer);
+      const response = await fetch(UrlServer, {
+        method: 'GET', // Ou o método necessário
+        headers: { 'Content-Type': 'application/json' },
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
